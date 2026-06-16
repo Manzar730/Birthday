@@ -1,0 +1,150 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  overflow-x:hidden;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(
+      135deg,
+      #ffd6f0,
+      #ffc1e3,
+      #f5d0ff
+  );
+  min-height:100vh;
+}
+
+.scene{
+  display:none;
+  min-height:100vh;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+}
+
+.scene.active{
+  display:flex;
+}
+
+.heroBear{
+  width:90%;
+  max-width:600px;
+  position:relative;
+}
+
+.heroBear::before{
+  content:"🧸";
+  font-size:260px;
+  display:block;
+  text-align:center;
+  animation:float 4s ease-in-out infinite;
+}
+
+.belly{
+  position:absolute;
+  top:55%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#fff;
+  color:#ff4fa0;
+  padding:10px 25px;
+  border-radius:50px;
+  font-weight:bold;
+}
+
+.message{
+  text-align:center;
+  margin-top:-20px;
+}
+
+.message h1,
+.message h2{
+  color:#ff3d92;
+}
+
+.buttons{
+  margin-top:20px;
+}
+
+button{
+  border:none;
+  padding:14px 24px;
+  border-radius:50px;
+  margin:8px;
+  cursor:pointer;
+}
+
+.yesBtn{
+  background:#ff4fa0;
+  color:white;
+}
+
+.noBtn{
+  background:white;
+}
+
+#musicBtn{
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:1000;
+}
+
+#loader{
+  position:fixed;
+  inset:0;
+  background:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.loader-bear{
+  font-size:90px;
+  animation:bounce 1s infinite;
+}
+
+#teddyContainer{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+}
+
+.floatingBear{
+  position:absolute;
+  font-size:70px;
+  animation:floatBear linear infinite;
+}
+
+.letterCard,
+.funnyCard,
+.finalCard,
+.giftBoxArea{
+  background:rgba(255,255,255,.75);
+  backdrop-filter:blur(12px);
+  padding:25px;
+  border-radius:30px;
+  max-width:900px;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-25px);}
+}
+
+@keyframes bounce{
+  50%{transform:translateY(-20px);}
+}
+
+@keyframes floatBear{
+  from{
+    transform:translateY(120vh);
+  }
+  to{
+    transform:translateY(-150px);
+  }
+}
