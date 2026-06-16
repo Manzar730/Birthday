@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Nayab ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-bear">🧸</div>
+    <h2>Preparing a magical surprise for Nayab...</h2>
+  </div>
+
+  <!-- Music -->
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicBtn">🎵</button>
+
+  <!-- Floating Teddy Layer -->
+  <div id="teddyContainer"></div>
+
+  <!-- Sparkles -->
+  <div id="sparkles"></div>
+
+  <!-- Scene 1 -->
+  <section class="scene active" id="scene1">
+
+    <div class="heroBear">
+      <div class="belly">NAYAB</div>
+
+      <div class="message">
+        <h1>🐻 You know why we're all floating today?</h1>
+        <p>You want to know?</p>
+
+        <div class="buttons">
+          <button class="yesBtn" onclick="goScene('scene2')">
+            YES 💕
+          </button>
+
+          <button class="noBtn" onclick="showNoPage('scene1')">
+            NO 🐻
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Scene 2 -->
+  <section class="scene" id="scene2">
+
+    <div class="heroBear">
+      <div class="belly">HBD</div>
+
+      <div class="message">
+        <h2>
+          ✨ Because today is the day the cutest little miracle
+          landed on Earth and made the world brighter.
+        </h2>
+
+        <p>
+          💭 Do you want to know who that special girl is?
+        </p>
+
+        <div class="buttons">
+          <button class="yesBtn" onclick="goScene('scene3')">
+            YES 💕
+          </button>
+
+          <button class="noBtn" onclick="showNoPage('scene2')">
+            NO 🐻
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Scene 3 -->
+  <section class="scene" id="scene3">
+
+    <div class="heroBear">
+      <div class="belly">NAYAB</div>
+
+      <div class="message">
+        <h2>
+          Of course, it's you! The reason we're all celebrating today. 🐻💕
+        </h2>
+
+        <p>
+          💖 Do you want to know why I invested so much time creating
+          this cute little website just to celebrate your birthday?
+        </p>
+
+        <p>
+          😌 Sorry girl... this time you only have one option.
+        </p>
+
+        <button class="yesBtn" onclick="goScene('letterScene')">
+          YES 💕
+        </button>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Letter -->
+  <section class="scene" id="letterScene">
+
+    <div class="letterCard">
+
+      <h1>Happy Birthday Nayab 💖</h1>
+
+      <div id="typedLetter"></div>
+
+      <button class="giftBtn" onclick="showGift()">
+        🎁 Open Gift
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- Gift -->
+  <section class="scene" id="giftScene">
+
+    <div class="giftBoxArea">
+
+      <div id="sunflowers"></div>
+
+      <h2>
+        🌻 We may not be able to hand you a gift in person,
+        so please accept this little field of sunflowers —
+        chosen with love because they remind us of your smile.
+      </h2>
+
+      <button class="yesBtn" onclick="goScene('finalScene')">
+        Continue 💕
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- Final -->
+  <section class="scene" id="finalScene">
+
+    <div class="finalCard">
+
+      <h1>Happy Birthday Nayab ❤️</h1>
+
+      <p>
+        May your year be filled with happiness,
+        peace, laughter, dreams and endless sunshine.
+      </p>
+
+      <div class="heartRain">💖 💕 💖 💕 💖</div>
+
+    </div>
+
+  </section>
+
+  <!-- NO PAGE -->
+  <section class="scene" id="noScene">
+
+    <div class="funnyCard">
+
+      <h1>🐻💖 Oops! You clicked NO?</h1>
+
+      <p>
+        Honestly, Nayab, the teddy bears saw that coming. 😆
+      </p>
+
+      <p>
+        Before you click anything else, there's someone
+        you should meet...
+      </p>
+
+      <h2>👨‍💻 Meet the developer: Manzar Alam</h2>
+
+      <p>
+        He spent hours designing, coding and filling
+        this website with teddy bears and surprises.
+      </p>
+
+      <div class="buttons">
+        <button class="yesBtn" onclick="backToFlow()">
+          Back & Select YES 💕
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
